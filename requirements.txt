@@ -1,11 +1,10 @@
---extra-index-url https://download.pytorch.org/whl/cpu
 streamlit
-numpy<2
+numpy==1.26.4
 pandas
 scikit-learn==1.7.2
 joblib
-gensim
-tensorflow-cpu==2.16.2
+gensim==4.4.0
+tensorflow-cpu==2.20.0
 torch
 transformers==4.44.2
 safetensors
