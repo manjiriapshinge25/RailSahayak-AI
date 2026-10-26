@@ -1,11 +1,11 @@
 streamlit
-numpy<2
-pandas
-scikit-learn
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.7.2
 joblib
 gensim==4.3.3
 tensorflow-cpu==2.15.1
-torch
+torch==2.4.1
 transformers==4.44.2
 safetensors
 matplotlib
