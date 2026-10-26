@@ -77,7 +77,7 @@ def average_word_vectors(texts, word_vectors, vector_size):
 @st.cache_resource(show_spinner="Loading saved models…")
 def load_assets():
     required = [
-        "tfidf_model.pkl", "word2vec.model", "w2v_classifier.pkl",
+        "tfidf_model.pkl", "word2vec_fixed.model", "w2v_classifier.pkl",
         "glove_classifier.pkl", "lstm_model.keras",
         "tokenizer.json", "label_encoder.pkl",
         "bert_classifier.pkl", "type_model.pkl"
@@ -88,7 +88,7 @@ def load_assets():
 
     a = {}
     a["tfidf"] = joblib.load(MODEL_DIR / "tfidf_model.pkl")
-    a["w2v"] = Word2Vec.load(str(MODEL_DIR / "word2vec.model"))
+    a["w2v"] = Word2Vec.load(str(MODEL_DIR / "word2vec_fixed.model"))
     a["w2v_clf"] = joblib.load(MODEL_DIR / "w2v_classifier.pkl")
     a["glove"] = gensim_api.load("glove-twitter-25")
     a["glove_clf"] = joblib.load(MODEL_DIR / "glove_classifier.pkl")
