@@ -19,7 +19,8 @@ from gensim.models import Word2Vec
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
-from transformers import AutoModel, AutoTokenizer
+from transformers.models.auto.modeling_auto import AutoModel
+from transformers.models.auto.tokenization_auto import AutoTokenizer
 
 APP_DIR = Path(__file__).resolve().parent
 MODEL_DIR = APP_DIR / "models"
